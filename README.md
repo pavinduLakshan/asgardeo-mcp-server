@@ -35,7 +35,7 @@ With tools like Claude Desktop, you can:
   | API | Scopes |
   |-----|--------|
   | Application Management API (`/api/server/v1/applications`) | `internal_application_mgt_view`, `internal_application_mgt_update`, `internal_application_mgt_create` |
-  | API Resource Management API (`/api/server/v1/api-resources`) | `internal_api_resource_update`, `internal_api_resource_create`, `internal_api_resource_view` |
+  | API Resource Management API (`/api/server/v1/api-resources`) | `internal_api_resource_create`, `internal_api_resource_view` |
   | Identity Provider Management API (`/api/server/v1/identity-providers`) | `internal_idp_view` |
   | Authenticators Management API (`/api/server/v1/authenticators`) | `internal_authenticator_view` |
   | Claim Management API (`/api/server/v1/claim-dialects`) | `internal_claim_meta_view` |
