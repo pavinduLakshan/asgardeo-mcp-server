@@ -58,20 +58,21 @@ With tools like Claude Desktop, you can:
   ```bash
   go build -o asgardeo-mcp
   ```
+  This will create the `asgardeo-mcp` binary in the current directory (e.g., `/Users/<user directory>/asgardeo-mcp-server/asgardeo-mcp`). Note down this absolute path as you will need it in the next step.
 
 7. **Configure Your MCP Client**:
 
 #### VS Code (GitHub Copilot)
 
 - Install the GitHub Copilot extension.
-- Open VS Code Settings (`File > Preferences > Settings`).
-- Search for "MCP" and edit the `settings.json` file:
+- Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and select `MCP: Open User Configuration`.
+- Add the following server configuration to the `mcp.json` file:
   ```json
-  "mcp": {
+  {
     "servers": {
         "asgardeo-mcp-server": {
             "type": "stdio",
-            "command": "<absolute path to the asgardeo-mcp executable, e.g., /Users/<user directory>/<repository path>/asgardeo-mcp-server/asgardeo-mcp>",
+            "command": "<absolute path to the asgardeo-mcp executable>",
             "args": [],
             "env": {
                 "BASE_URL" : "https://api.asgardeo.io/t/<asgardeo organization>",
@@ -80,9 +81,9 @@ With tools like Claude Desktop, you can:
               }
             }
     }
-    }
+  }
   ```
-- Save the file and start the MCP server from `settings.json`.
+- Save the file and start the MCP server from `mcp.json`.
 
 #### Claude Desktop
 
@@ -90,7 +91,7 @@ With tools like Claude Desktop, you can:
 - Edit the `claude_desktop_config.json` file:
   ```json
   "asgardeo-mcp": {
-   "command": "<absolute path to the asgardeo-mcp executable, e.g., /Users/<user directory>/<repository path>/asgardeo-mcp-server/asgardeo-mcp>",
+   "command": "<absolute path to the asgardeo-mcp executable>",
    "args": [],
    "env": {
     "BASE_URL": "https://api.asgardeo.io/t/<asgardeo organization>",
@@ -107,7 +108,7 @@ With tools like Claude Desktop, you can:
 - Edit the `mcp.json` file:
   ```json
   "asgardeo-mcp": {
-   "command": "<absolute path to the asgardeo-mcp executable, e.g., /Users/<user directory>/<repository path>/asgardeo-mcp-server/asgardeo-mcp>",
+   "command": "<absolute path to the asgardeo-mcp executable>",
    "args": [],
    "env": {
     "BASE_URL": "https://api.asgardeo.io/t/<asgardeo organization>",
